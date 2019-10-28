@@ -20,7 +20,7 @@ body {
 	display: flex;
 	justify-content: center;
 	flex-flow: column nowrap;
-	max-width: 480px;
+	max-width: 1200px;
 	margin: 0 auto;
 }
 
@@ -36,7 +36,7 @@ h1 {
 	font-size:  1.875em;
 }
 h2 {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 h3 {
 	font-size: 1.125em;
@@ -58,12 +58,10 @@ header {
 	display: flex;
 	height: 110px;
 	justify-content: center;
-	border-bottom: 3px solid #77a466;
 	margin: 0 auto;
 }
 
 header h1 {
-	float: left;
 	margin: 0;
 	padding: 38px 0;
 }
@@ -79,11 +77,9 @@ header h1 span {
 	flex-flow: column nowrap;
 	justify-content: center;
 	margin: 0 auto;
-	clear: both;
 	padding: .25em 1em;
 }
 .top-section nav {
-	float: right;
 	padding: 1em 0;
 }
 .top-section nav ul {
@@ -103,18 +99,13 @@ header h1 span {
 	text-decoration: none;
 	color:#77a466;
 }
-.main-image {
-	height: auto;
-	float: left;
-}
+
 .main-image img {
 	width: 100%;
 	border-bottom: 3px solid #77a466;
 }
 
 .main-title {
-	height: auto;
-	float: left;
 	text-align: justify;
 }
 .main-title h3 {
@@ -133,19 +124,12 @@ header h1 span {
 .section-two,
 .section-three {
 	width: 100%;
-	height: auto;
-	float: left;
 	border-top: 1px solid #eee;
 	text-align: center;
 }
 
 .section-one h4 {
 	padding: 10px 0;
-}
-
-.section-two {
-	border-left: 1px solid #eee;
-	border-right: 1px solid #eee;
 }
 
 .section-two h4,
@@ -178,10 +162,8 @@ footer {
 	align-items: center;
 	border-top: 3px solid #eee;
 	display: flex;
-	height: 50px;
 	justify-content: center;
 	margin: 0 auto;
-	clear: both;
 	text-align: center;
 }
 footer span {
@@ -189,4 +171,14 @@ footer span {
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: 14px;
+}
+
+@media all and (min-width:768px) {
+    /* Tablet styles here */
+
+}
+
+@media all and (min-width:1200px) {
+    /* Desktop styles here */
+
 }

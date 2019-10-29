@@ -56,17 +56,38 @@ header {
 	align-items: center;
 	border-bottom: 3px solid #77a466;
 	display: flex;
-	height: 110px;
 	justify-content: center;
 	margin: 0 auto;
+	flex-flow: column;
+	width: 100%;
 }
 
 header h1 {
 	margin: 0;
-	padding: 38px 0;
+	padding: 38px 0px 0px 0px;
 }
 header h1 span {
 	color: #77a466;
+}
+header nav {
+	padding: 16px 0;
+}
+header nav ul {
+	margin: 0;
+	padding: 0;
+}
+header nav ul li {
+	text-align:center;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 1em;
+	padding: 0 10px;
+	display: block;
+	padding: 10px;
+}
+header nav ul li a{
+	text-decoration: none;
+	color:#77a466;
 }
 
 /*The widths are in a percentage!*/
@@ -157,7 +178,6 @@ header h1 span {
 	line-height: 24px;
 }
 
-/*The widths are in a percentage!*/
 footer {
 	align-items: center;
 	border-top: 3px solid #eee;
@@ -172,13 +192,60 @@ footer span {
 	color: #77a466;
 	font-size: 14px;
 }
-
 @media all and (min-width:768px) {
-    /* Tablet styles here */
-
+header{
+	width: 100%;
+	}
+	.bottom-section{
+	align-items: baseline;
+	justify-content:center;
+	display: flex;
+	flex-flow: row nowrap;
+	width: 100%;
+	}
+	header nav ul{
+		display: flex;
+		flex-flow: row;
+		justify-content: space-between;
+	}
+.section-one{
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	flex-flow: column nowrap;
 }
-
+.section-two{
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	flex-flow: column nowrap;
+}
+.section-three{
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	flex-flow: column nowrap;
+}
+}
 @media all and (min-width:1200px) {
-    /* Desktop styles here */
 
+header{
+	align-items: baseline;
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+	width: 100%;
+}
+header nav ul{
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+}
+.bottom-section{
+align-items: baseline;
+justify-content:center;
+display: flex;
+flex-flow: row nowrap;
+width: 100%;
+}
 }

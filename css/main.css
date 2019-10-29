@@ -19,9 +19,9 @@ body {
 	align-items: center;
 	display: flex;
 	justify-content: center;
-	flex-flow: column nowrap;
+	flex-flow: row wrap;
 	max-width: 1200px;
-	margin: 0 auto;
+	width: 90%;
 }
 
 h1,
@@ -54,35 +54,38 @@ p {
 /*The widths are in a percentage!*/
 header {
 	align-items: center;
-	border-bottom: 3px solid #77a466;
 	display: flex;
 	justify-content: center;
-	margin: 0 auto;
-	flex-flow: column;
+	flex-flow: row wrap;
 	width: 100%;
 }
 
 header h1 {
+	border-bottom: 3px solid #77a466;
 	margin: 0;
 	padding: 38px 0px 0px 0px;
+	text-align: center;
+	width: 95%;
+
+
 }
 header h1 span {
 	color: #77a466;
 }
 header nav {
 	padding: 16px 0;
+	width: 100%;
 }
 header nav ul {
 	margin: 0;
 	padding: 0;
 }
 header nav ul li {
+	list-style: none;
 	text-align:center;
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: 1em;
-	padding: 0 10px;
-	display: block;
 	padding: 10px;
 }
 header nav ul li a{
@@ -97,33 +100,14 @@ header nav ul li a{
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: center;
-	margin: 0 auto;
-	padding: .25em 1em;
 }
-.top-section nav {
-	padding: 1em 0;
-}
-.top-section nav ul {
-	margin: 0;
-	padding: 0;
-}
-.top-section nav ul li {
-	text-align:center;
-	text-transform: uppercase;
-	font-weight: 700;
-	font-size: .875em;
-	padding: 0 10px;
-	display: block;
-	padding: .5em .5em;
-}
-.top-section nav ul li a{
-	text-decoration: none;
-	color:#77a466;
-}
+
+
 
 .main-image img {
 	width: 100%;
 	border-bottom: 3px solid #77a466;
+	border-top: 3px solid #77a466;
 }
 
 .main-title {
@@ -133,7 +117,6 @@ header nav ul li a{
 	text-align: left;
 	padding: 5px 0;
 	color: #77a466;
-	text-align: justify;
 }
 .main-title p {
 	padding: 0;
@@ -144,18 +127,8 @@ header nav ul li a{
 .section-one,
 .section-two,
 .section-three {
-	width: 100%;
 	border-top: 1px solid #eee;
-	text-align: center;
-}
-
-.section-one h4 {
-	padding: 10px 0;
-}
-
-.section-two h4,
-.section-three h4 {
-	padding: 10px 30px;
+	width: 100%;
 }
 
 .menu {
@@ -171,11 +144,13 @@ header nav ul li a{
 	color: #333;
 	font-size: 1em;
 	line-height: 21px;
+	padding: 10px 0;
 }
 
 .address {
 	font-size: 1em;
 	line-height: 24px;
+	padding: 10px 0;
 }
 
 footer {
@@ -185,6 +160,7 @@ footer {
 	justify-content: center;
 	margin: 0 auto;
 	text-align: center;
+	width: 100%;
 }
 footer span {
 	font-family: 'Wisdom Script', cursive;
@@ -195,38 +171,35 @@ footer span {
 @media all and (min-width:768px) {
 header{
 	width: 100%;
-	}
-	.bottom-section{
-	align-items: baseline;
-	justify-content:center;
+}
+header nav ul{
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+}
+.bottom-section{
+	align-items: flex-start;
+	justify-content:space-between;
 	display: flex;
 	flex-flow: row nowrap;
-	width: 100%;
-	}
-	header nav ul{
-		display: flex;
-		flex-flow: row;
-		justify-content: space-between;
-	}
-.section-one{
-	align-items: center;
-	justify-content: center;
-	display: flex;
-	flex-flow: column nowrap;
 }
+.section-one,
+.section-two,
+.section-three{
+	align-items: flex-start;
+}
+
+
+
 .section-two{
-	align-items: center;
-	justify-content: center;
-	display: flex;
-	flex-flow: column nowrap;
+	border-left: 1px solid #eee;
+	border-right: 1px solid #eee;
+	padding: 0px 20px;
 }
 .section-three{
-	align-items: center;
-	justify-content: center;
-	display: flex;
-	flex-flow: column nowrap;
+	padding-left: 10px;
 }
-}
+
 @media all and (min-width:1200px) {
 
 header{
@@ -235,6 +208,10 @@ header{
 	flex-flow: row;
 	justify-content: space-between;
 	width: 100%;
+}
+header h1 {
+	border-bottom: none;
+	text-align: left;
 }
 header nav ul{
 	display: flex;
